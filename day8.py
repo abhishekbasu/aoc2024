@@ -29,7 +29,7 @@ def parse_grid(grid: list[list[str]]):
     return antenna
 
 
-def manhattan_histance(loc1: tuple[int, int], loc2: tuple[int, int]) -> tuple[int, int]:
+def manhattan_distance(loc1: tuple[int, int], loc2: tuple[int, int]) -> tuple[int, int]:
     return loc1[0] - loc2[0], loc1[1] - loc2[1]
 
 
@@ -47,7 +47,7 @@ def find_antinodes(grid: list[list[str]], resonance: bool = False) -> set[int]:
                 antinodes.add(antenna1)
                 antinodes.add(antenna2)
 
-            md = manhattan_histance(antenna1, antenna2)
+            md = manhattan_distance(antenna1, antenna2)
             n = 1
             while True:
                 additions = 0
